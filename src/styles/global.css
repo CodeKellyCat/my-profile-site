@@ -1,0 +1,36 @@
+body {
+    font-family: 'YourCustomFont', sans-serif;
+    margin: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally on mobile/tablet */
+    justify-content: flex-start; /* Align items to the top */
+    min-height: calc(100vh - 3.5rem); /* Adjust based on your header's height */
+    padding-top: 3.5rem; /* Adjust based on your header's height */
+    padding-left: 1rem; /* Add some initial left padding for mobile */
+    padding-right: 1rem; /* Add some initial right padding for mobile */
+}
+
+.centered-content {
+    text-align: center; /* Center text within the container */
+    max-width: 80vw; /* Limit width for readability */
+}
+
+/* Desktop adjustment */
+@media (min-width: 64em) {
+    .page-container {
+        align-items: flex-start; /* Align content to the left overall */
+        padding-left: 7rem; /* Adjust based on logo width */
+        padding-right: 2rem;
+    }
+
+    .centered-content {
+        text-align: left; /* Align text to the left within its container */
+        max-width: 60vw; /* Adjust width for desktop */
+        margin-left: auto; /* Center the content block horizontally */
+        margin-right: auto; /* Center the content block horizontally */
+    }
+}

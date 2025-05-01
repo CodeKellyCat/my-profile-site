@@ -1,0 +1,278 @@
+
+/* src/styles/Navbar.css */
+
+:root {
+    font-size: 16px;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 110;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+}
+
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo svg {
+    width: 80px; /* Default logo size */
+    height: auto;
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 120;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-menu-toggle svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.navbar {
+    background-color: #f8f8f8;
+    box-shadow: 0 -0.1rem 0.3rem #0000001a;
+    z-index: 100;
+    display: none; /* Initially hidden for mobile/tablet */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar.open {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.6rem 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navbar li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 0;
+}
+
+.navbar li a svg {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.navbar li a span {
+    /* ... existing span styles ... */
+}
+
+//* Mobile and Tablet Styles (up to desktop breakpoint) */
+@media (max-width: 63.99em) {
+    .site-header {
+        justify-content: space-between; /* Keep space between logo and toggle */
+    }
+
+    .site-header .logo {
+        position: fixed; /* Keep logo fixed at top left */
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .logo svg {
+        width: 100px; /* Adjust mobile/tablet logo size */
+    }
+
+    .navbar {
+        /* Remains initially hidden */
+    }
+
+    .navbar.open {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.8rem 0;
+    }
+
+    .navbar.open ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar.open li a {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.mobile-menu-toggle.close-button {
+    position: fixed;
+    top: auto; /* Reset bottom positioning */
+    left: 1rem; /* Position to the left */
+    bottom: calc(env(safe-area-inset-bottom) + 5.5rem); /* Adjust from bottom, considering safe areas */
+    transform: translateX(0); /* Reset centering */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: #333; /* Match other icon color */
+    z-index: 121; /* Ensure it's above the navbar */
+}
+
+.mobile-menu-toggle.close-button svg {
+    width: 2.5rem; /* Adjust size as needed */
+    height: 2.5rem; /* Adjust size as needed */
+}
+
+.navbar.open {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: .8rem 0;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem); /* Consider safe area for navbar */
+}
+
+
+/* Desktop Styles */
+@media (min-width: 64em) {
+    .site-header {
+        flex-direction: row;
+        align-items: flex-start; /* Align logo to top */
+        justify-content: flex-start; /* Align logo to the left */
+    }
+
+    .site-header .logo {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .logo svg {
+        width: 120px; /* Adjust desktop logo size */
+    }
+
+    .mobile-menu-toggle {
+        display: none; /* Hide toggle on desktop */
+    }
+
+    .navbar {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: auto; /* Push to the right */
+        right: 0;
+        width: 5rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.25rem 0;
+        background-color: #f8f8f8;
+        box-shadow: -0.1rem 0 0.3rem #0000001a;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
+    }
+
+    .navbar li {
+        margin-bottom: 1.5rem;
+        width: 100%;
+        position: relative;
+    }
+
+    .navbar li a {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.6rem 0;
+    }
+
+    .navbar li a svg {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .navbar li a span {
+        position: absolute;
+        top: -2.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000000cc;
+        color: #ffffff;
+        padding: 0.3rem 0.6rem;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease, top 0.2s ease;
+    }
+
+    .navbar li a:hover span {
+        opacity: 1;
+        visibility: visible;
+        top: -1.4rem;
+    }
+
+    .navbar li a {
+        font-size: 0;
+    }
+}
