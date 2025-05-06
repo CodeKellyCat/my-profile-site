@@ -7,21 +7,23 @@ import ExperienceIcon from "../assets/icons/nav/experience-icon.svg?react";
 import ProjectsIcon from "../assets/icons/nav/projects-icon.svg?react";
 import ContactIcon from "../assets/icons/nav/contact-icon.svg?react";
 import PlusIcon from "../assets/icons/nav/plus-icon.svg?react";
-// Import your close icon
 import CloseIcon from "../assets/icons/nav/close-icon.svg?react";
-import Logo from "../assets/logo/KM-logo.svg?react";
+import Logo from "../assets/logo/km-logo.svg?react";
 
 function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+        // Apply or remove a class on the body or a parent to hide/show the footer
+        document.body.classList.toggle('mobile-menu-open', isMobileMenuOpen);
     };
 
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 1024) { // Adjust breakpoint
                 setIsMobileMenuOpen(false);
+                document.body.classList.remove('mobile-menu-open'); // Ensure class is removed on desktop
             }
         };
 
@@ -42,10 +44,10 @@ function Navbar() {
                     <PlusIcon />
                 </button>
             )}
-            <nav className={`navbar ${isMobileMenuOpen ? 'open' : ''}`}>
+            <nav className={`mobile-navbar ${isMobileMenuOpen ? 'open' : ''}`}>
                 {isMobileMenuOpen && (
                     <button className="mobile-menu-toggle close-button" onClick={toggleMobileMenu}>
-                        <CloseIcon /> {/* Render the close icon when open */}
+                        <CloseIcon />
                     </button>
                 )}
                 <ul>

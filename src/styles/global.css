@@ -1,36 +1,76 @@
+/* Fonts */
+
+/* Archivo Black */
+@font-face {
+    font-family: 'Archivo Black';
+    src: local('Archivo Black'),
+        url('../assets/fonts/ArchivoBlack-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Intro Rust';
+    src: local('Intro Rust'),
+        url('../assets/fonts/IntroRust.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Work Sans */
+@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: local('Work Sans'),
+        url('../assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: url('../assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Intro Rust';
+    color: #353f50;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.6rem;
+    font-size: 1rem;
+}
+
 body {
-    font-family: 'YourCustomFont', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     margin: 0;
+    background-color: #EEDFFE;
 }
 
-.page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally on mobile/tablet */
-    justify-content: flex-start; /* Align items to the top */
-    min-height: calc(100vh - 3.5rem); /* Adjust based on your header's height */
-    padding-top: 3.5rem; /* Adjust based on your header's height */
-    padding-left: 1rem; /* Add some initial left padding for mobile */
-    padding-right: 1rem; /* Add some initial right padding for mobile */
-}
-
-.centered-content {
-    text-align: center; /* Center text within the container */
-    max-width: 80vw; /* Limit width for readability */
-}
 
 /* Desktop adjustment */
 @media (min-width: 64em) {
     .page-container {
-        align-items: flex-start; /* Align content to the left overall */
-        padding-left: 7rem; /* Adjust based on logo width */
+        align-items: flex-start;
+        /* Align content to the left overall */
+        padding-left: 7rem;
+        /* Adjust based on logo width */
         padding-right: 2rem;
+        padding-bottom: 4rem; 
     }
 
-    .centered-content {
-        text-align: left; /* Align text to the left within its container */
-        max-width: 60vw; /* Adjust width for desktop */
-        margin-left: auto; /* Center the content block horizontally */
-        margin-right: auto; /* Center the content block horizontally */
+    h1 {
+        font-size: 5rem;
     }
+
+    
+
 }

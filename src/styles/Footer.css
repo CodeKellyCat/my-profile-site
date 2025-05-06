@@ -1,0 +1,35 @@
+
+.site-footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #555;
+    font-size: 0.9rem;
+    /* Default styles for mobile/tablet (always visible) */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 0;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+/* Desktop Styles */
+
+@media (min-width: 64em) {
+    .site-footer {
+    display: block; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }
+}
+/* Mobile/Tablet - Hide when mobile menu is open (we'll control this with a class from Navbar) */
+@media (max-width: 63.99em) {
+    /* Initially visible */
+}
+
+/* Add a class that Navbar will apply when the mobile menu is open */
+.site-footer.mobile-menu-open {
+    display: none;
+}

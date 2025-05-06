@@ -1,0 +1,132 @@
+.about-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background-color: #efe6f7;
+    border: .2rem solid
+    #697FA4;
+    border-radius: 2rem;
+    margin: 4rem 1rem; /* Adjusted margin for better mobile spacing */
+}
+
+.swiper-container-wrapper {
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto; 
+}
+
+.about-page-container p {
+    margin: 0 2rem 1rem; /* Added left/right margin for content */
+}
+
+.about-content h1,
+.about-content h2 {
+    text-align: center;
+    margin: 1rem 2rem;
+}
+
+.about-content p {
+    text-align: left;
+    line-height: 1.6; /* Improved readability */
+}
+
+.about-content li {
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+.about-page-swiper {
+    width: 100%; /* Swiper takes full width of its container */
+    height: auto;
+}
+
+.carousel-image {
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    margin-bottom: 0.5rem; /* Space below the image */
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+/* Swiper navigation button styles */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #697FA4;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.5rem;
+    color: #353f50;
+    font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #353f50;
+    box-shadow: 0 0 10px rgba(105, 127, 164, 0.8);  
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Tablet adjustment */
+@media (min-width: 48em) {
+    .about-page-container {
+        margin: 8rem 2rem;
+    }
+
+    .about-page-container p {
+        margin: 0 4rem 1.5rem;
+    }
+
+    .about-page-container h1 {
+        font-size: 4rem;
+    }
+
+    .swiper-container-wrapper {
+        margin: 3rem auto;
+    }
+}
+
+/* Desktop adjustment */
+@media (min-width: 64em) {
+    .about-page-container {
+        margin-right: 8rem;
+        margin-left: 8rem;
+    }
+
+    .about-page-container p {
+        margin: 0 8rem 2rem;
+    }
+
+    .about-page-container ul {
+        margin: 0 8rem 2rem;
+    }
+
+    .swiper-container-wrapper {
+        max-width: 800px;
+        margin: 4rem auto;
+    }
+}

@@ -1,0 +1,1 @@
+export const restBase = 'https://kellymclaughlin.ca/portfolio/wp-json/wp/v2/'

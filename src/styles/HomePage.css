@@ -1,0 +1,84 @@
+.homepage-entry-content h2,
+p {
+    margin: 1rem 2rem;
+    text-align: center;
+}
+
+.homepage-entry-content p {
+    margin-bottom: 6rem;
+}
+
+.wp-block-group.kellyimgh1-2-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.wp-block-group.kellyimgh1-2-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 9rem;
+}
+
+.homepage-h1 {
+    font-size: 2rem;
+    margin-left: 3rem;
+    ;
+    position: absolute;
+    z-index: 1;
+    color: #353f50;
+    text-align: center;
+    top: 7rem;
+}
+
+.homepage-h2 {
+    font-size: 1rem;
+}
+
+/* Tablet adjustment */
+@media (min-width: 48em) {
+    .homepage-h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        top: 4rem;
+    }
+    .wp-block-group.kellyimgh1-2-container img {
+        width: 60%; 
+        margin-left: auto; 
+        margin-right: auto; 
+        margin-top: 4rem; 
+    }
+
+    .homepage-p {
+margin: 0 rrem;
+    }
+
+}
+
+/* Desktop adjustment */
+@media (min-width: 64em) {
+    .homepage-container {
+        padding-right: 80px;
+    }
+
+    .homepage-h1 {
+        font-size: 4rem;
+    }
+
+    .wp-block-group.kellyimgh1-2-container img {
+        width: 70%; 
+        margin-left: auto; 
+        margin-right: auto; 
+        margin-top: 4rem; 
+    }
+
+    .homepage-container p {
+        margin: 2rem 12rem 6rem;
+    }
+
+
+}
