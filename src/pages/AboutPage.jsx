@@ -26,8 +26,7 @@ const AboutPage = () => {
             .then(([pageData, mediaData]) => {
                 setPageData(pageData);
 
-                // Filter out unwanted image (replace with actual ID)
-                const unwantedImageId = 114; // Replace with correct image ID
+                const unwantedImageId = [114, 172, 178, 183, 186,];
                 const filteredImages = mediaData.filter(img => img.id !== unwantedImageId)
                     .map(img => ({
                         src: img.source_url,
